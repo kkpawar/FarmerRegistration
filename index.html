@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="BasicAuth" />
+    <meta name="author" content="siddub" />
+
+    <title>Farmer Register</title>
+    <title>Create a account</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdHptsZAAAAAIRQmQK-LSTnhfrv1Dcw67xdkf0q"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <br />
+      <h2 class="form-heading">FARMONTAE</h2>
+      <br>
+      <br>
+
+      <div class="card">
+        <div class="card-header"><h5>Farmer Registration / शेतकरी नोंदणी </h5></div>
+        <div class="card-body" >
+          <form class="login-form" method="POST" action="/register">
+            <input
+              type="hidden"
+              id="g-recaptcha-response"
+              name="g-recaptcha-response"
+            />
+            <input type="hidden" name="action" value="validate_captcha" />
+
+            <label for="name">Full Name / संपूर्ण नाव </label>
+            <input
+              name="username"
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              autofocus="true"
+            />
+                  <br>
+            <label for="text">Address / पत्ता</label>
+            <textarea name="Adress" class="form-control" cols="20" rows="4" placeholder="Address"></textarea>
+                  <br>
+                  <label for="pincode">Pin Code / पिन कोड</label>
+                  <input type="text" name="pincode" placeholder="pincode" id="pincode" class="form-control">
+                  <br>
+            <label for="Gender" >Gender / लिंग
+            </label>
+            <input type="text" placeholder="Gender" name="" id="sex"class="form-control">
+              <br>
+              <label for="Gender" >Birth Date / जन्म तारीख
+             </label>
+              <input type="date" placeholder="DOB" name="" id="sex"class="form-control">
+              <br>
+            <label for="state">District / जिल्हा </label>
+            <select name="state" id="state" aria-placeholder="select" placeholder="click" class="form-control">
+              <option value=""></option>
+              <option value="Andhra Pradesh">Ahmednagar / अहमदनगर</option>
+              <option value="Arunachal Pradesh">Akola / अकोला</option>
+              <option value="Assam">Amravati / अमरावती</option>
+              <option value="Bihar">Aurangabad / औरंगाबाद</option>
+              <option value="Chhattisgarh">Beed / बीड</option>
+              <option value="Goa">Bhandara / भंडारा	 </option>
+              <option value="Gujarat">Buldhana / बुलढाणा</option>
+              <option value="Haryana">Chandrapur / चंद्रपूर </option>
+              <option value="Himachal Pradesh"> Dhule /  धुळे</option>
+              <option value="Himachal Pradesh">Gadchiroli / गडचिरोली</option>
+              <option value="Jharkhand">Gondia / गोंदिया</option>
+              <option value="Karnataka">Hingoli / हिंगोली </option>
+              <option value="Kerala">Jalgaon / जळगाव</option>
+              <option value="Madhya Pradesh"> Jalna /जालना	</option>
+              <option value="Maharashtra">Kolhapur	/ कोल्हापूर	 </option>
+              <option value="Manipur">Latur / लातूर </option>
+              <option value="Meghalaya">Mumbai	/ मुंबई शहर	</option>
+              <option value="Mizoram">Mumbai Suburban	/ मुंबई उपनगर</option>
+              <option value="Nagaland	">Nagpur / नागपूर</option>
+              <option value="Odisha">Nanded / नांदेड</option>
+              <option value="Punjab	">Nandurbar / नंदुरबार		</option>
+              <option value="Rajasthan">Nashik / नाशिक </option>
+              <option value="Sikkim">Osmanabad / उस्मानाबाद</option>
+              <option value="Tamil Nadu">Palghar / पालघर </option>
+              <option value="Telangana">Pune / पुणे</option>
+              <option value="Tripura">Raigad / रायगड </option>
+              <option value="Uttar Pradesh">Ratnagiri/ रत्‍नागिरी</option>
+              <option value="Uttarakhand">Sangli / सांगली</option>
+              <option value="West Bengal">Satara / सातारा</option>
+              <option value="West Bengal">Sindhudurg / सिंधुदुर्ग</option>
+              <option value="West Bengal">Solapur / सोलापूर</option>
+              <option value="West Bengal">Thane / ठाणे</option>
+              <option value="West Bengal">Wardha / वर्धा	</option>
+              <option value="West Bengal">Washim / वाशीम</option>
+              <option value="West Bengal">Yavatmal / यवतमाळ</option>
+          </select>
+
+              <br>
+
+              <label for="city">City / तालुका  </label>
+                <input type="text" name="City" placeholder="City" id="city" class="form-control"><br>
+
+              <label for="village">village / गाव  </label>
+                <input type="text" name="village" placeholder="village" id="village" class="form-control"><br>
+            <label for="email">Email / ईमेल </label>
+            <input
+              name="email"
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              autofocus="true"
+            />
+            <!-- <br>
+            <label for="email">Password / संकेतशब्द</label>
+            <input
+              name="password"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <br>
+            <label for="email">Password Confirmation / संकेतशब्द</label>
+            <input
+              name="passwordConfirm"
+              type="password"
+              class="form-control"
+              placeholder="Password confirm"
+            />
+            <br> -->
+            <label for="text">Mobile / मोबाईल</label>
+            <input
+              type="text"
+              name="Mobile"
+              class="form-control"
+              placeholder="mobile number"
+            />
+            <br>
+            <label for="text">Blood Group /  रक्त गट  </label>
+            <input
+           type="text"
+           name="Aadhar Number"
+           class="form-control"
+           placeholder="Blood Group"
+         />
+         <br>
+            
+            <label for="text">Aadhar Number / आधार क्रमांक </label>
+             <input
+            type="text"
+            name="Aadhar Number"
+            class="form-control"
+            placeholder="Aadhar Number"
+          />
+          <br>
+          <label for="text">PAN Number / पॅन क्रमांक </label>
+          <input
+            type="text"
+            name="PAN Number"
+            class="form-control"
+            placeholder="PAN Number"
+          />
+          <br>
+          <label for="text"> Bank A/c / बँक खाते क्रमांक </label>
+          <input
+            type="text"
+            name="Account Number"
+            class="form-control"
+            placeholder="Account Number"
+          />
+          <br>
+          <label for="text"> IFSC Code / IFSC क्रमांक </label>
+          <input
+            type="text"
+            name="IFSC code"
+            class="form-control"
+            placeholder="IFSC CODE"
+          />
+          <br>
+          <label for="text">Photo / फोटो </label>&nbsp;&nbsp;
+            <br>
+            <button>Browse</button>
+            <br>
+          <br>
+          <br>
+          <br>
+          <div class="card-header"><h5>Family Information / कौटुंबिक माहिती</h5></div>
+            <form class="login-form" method="POST" action="/register">
+              <!-- <br>
+              <label for="text">Total Family Members / 
+                एकूण कुटुंबातील सद्स्य </label>
+          <input
+            type="text"
+            name="Family Members"
+            class="form-control"
+            placeholder="Enter"
+            />
+            <br>
+            <label for="text">Father Name / 
+              वडिलांचे नाव </label>
+        <input
+          type="text"
+          name="Father Name"
+          class="form-control"
+          placeholder="Mr."
+          />
+          <br>
+          <label for="text">Mother Name / 
+            आईचे नाव </label>
+      <input
+        type="text"
+        name="Mother Name"
+        class="form-control"
+        placeholder="Mrs."
+        />
+        <br>
+        <label for="text">Spouse Name / 
+          पती किंवा पत्नीचे  नाव </label>
+     <input
+      type="text"
+      name="Spouse Name"
+      class="form-control"
+      placeholder="Mr. / Mrs."
+      />
+
+      <br>
+        <label for="text">Name of your Son / 
+          मुलाचे नाव </label>
+     <input
+      type="text"
+      name="son Name"
+      class="form-control"
+      placeholder="Enter"
+      />
+      
+      <br>
+        <label for="text">Name of your Daughter / 
+          मुलीचे नाव </label>
+     <input
+      type="text"
+      name="Daughter Name"
+      class="form-control"
+      placeholder="Enter"
+      />
+
+            <br /> -->
+            <!-- <button class="btn-primary" type="submit">Sign up / साइन अप</button> -->
+            <!-- <div
+              style="align-text: center; margin-bottom: 10px; margin-top: 15px"
+            >
+              Go to <a href="/login">login</a> -->
+
+
+
+
+
+
+
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood Group
+            <br>
+            1)
+            <input
+            type="text"
+            name="Account Number"
+            width="20"
+          />
+          <input
+          type="text"
+          name="Account Number"
+          size="5"/>
+          <select name="Gender" id="gender"  placeholder="select">
+          <option value=""></option>
+          <option value="Male">Male / पुरुष</option>
+          <option value="Female">Female / स्त्री</option>
+          <option value="Others">Others / इतर </option>
+        </select>
+        <input
+            type="text"
+            name="Account Number"
+            size="25"/>
+            <input
+            type="text"
+            name="Account Number"
+            size="10"/>
+            <input
+            type="text"
+            name="Account Number"
+            size="10"/>
+            <select name="blood" id="blood"  placeholder="select">
+              <option value=""></option>
+              <option value="A+">A+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+ </option>
+              <option value="B-">B-</option>
+              <option value="O+">O+ </option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+ </option>
+              <option value="AB-">AB-</option>
+              </select>
+              <br>
+              2)
+              <input
+              type="text"
+              name="Account Number"
+              width="20"
+            />
+            <input
+            type="text"
+            name="Account Number"
+            size="5"/>
+            <select name="Gender" id="gender"  placeholder="select">
+            <option value=""></option>
+            <option value="Male">Male / पुरुष</option>
+            <option value="Female">Female / स्त्री</option>
+            <option value="Others">Others / इतर </option>
+          </select>
+          <input
+              type="text"
+              name="Account Number"
+              size="25"/>
+              <input
+              type="text"
+              name="Account Number"
+              size="10"/>
+              <input
+              type="text"
+              name="Account Number"
+              size="10"/>
+              <select name="blood" id="blood"  placeholder="select">
+                <option value=""></option>
+                <option value="A+">A+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+ </option>
+                <option value="B-">B-</option>
+                <option value="O+">O+ </option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+ </option>
+                <option value="AB-">AB-</option>
+                </select>
+                <br>
+              3)
+              <input
+              type="text"
+              name="Account Number"
+              width="20"
+            />
+            <input
+            type="text"
+            name="Account Number"
+            size="5"/>
+            <select name="Gender" id="gender"  placeholder="select">
+            <option value=""></option>
+            <option value="Male">Male / पुरुष</option>
+            <option value="Female">Female / स्त्री</option>
+            <option value="Others">Others / इतर </option>
+          </select>
+          <input
+              type="text"
+              name="Account Number"
+              size="25"/>
+              <input
+              type="text"
+              name="Account Number"
+              size="10"/>
+              <input
+              type="text"
+              name="Account Number"
+              size="10"/>
+              <select name="blood" id="blood"  placeholder="select">
+                <option value=""></option>
+                <option value="A+">A+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+ </option>
+                <option value="B-">B-</option>
+                <option value="O+">O+ </option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+ </option>
+                <option value="AB-">AB-</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <br>
+
+              <div class="card-header"><h5>Land Information / जमिनीची माहिती</h5></div>
+              <br>
+              <label for="text">Type of Land / जमिनीचे प्रकार </label>
+              <input
+              type="text"
+              name="type of land"
+              class="form-control"
+              placeholder="Type of Land"
+            />
+            <br>
+            <label for="text">Address of the Farm / शेत जमिनीचा  पत्ता</label>
+            <textarea name="Adress of land" class="form-control" cols="20" rows="4" placeholder="Address"></textarea>
+            <br>
+            <label for="text">Types of Water Supply / पाणी पुरवठा प्रकार :</label>&nbsp;&nbsp;&nbsp;
+            <select name="water supply" id="water supply"  placeholder="select">
+              <option value=""></option>
+              <option value="Surface Water">Surface Water </option>
+              <option value="Ground Water">Ground Water </option>
+              <option value="Others">Others / इतर </option>
+            </select>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Nearest Water Reservoir/ जवळील पाण्याचा स्रोत  :&nbsp;&nbsp;&nbsp;
+            <input
+              type="text"
+              name="near reservoir"
+              placeholder="Nearest reservoir"
+            />
+            <br>
+            <br>
+            <br>
+            Upload 7/12: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Browse</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload Land Photo:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Browse</button>
+
+
+  
+
+
+
+
+
+            </div>
+          </form>
+        </div>
+      </div>
+      
+
+      <br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; <button style="text-align: center;" class="btn-primary" type="submit">Add Record </button>
+      <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;  Go to <a href="/login">login</a>
+              <br>
+              <br>
+            </div>
+     </div>
+     <!-- /container -->
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+     <script>
+      var error = "<%= errors %>";
+
+      const showAlert = function (err) {
+        alert("error: " + err);
+      };
+
+      console.log(error);
+
+      if (error.includes("already")) {
+        showAlert(error);
+      }
+     </script>
+
+     <script>
+      grecaptcha.ready(function () {
+        // do request for recaptcha token
+        // response is promise with passed token
+        grecaptcha
+          .execute("6LdHptsZAAAAAIRQmQK-LSTnhfrv1Dcw67xdkf0q", {
+            action: "validate_captcha",
+          })
+          .then(function (token) {
+            // add token value to form
+            document.getElementById("g-recaptcha-response").value = token;
+          });
+      });
+     </script>
+     <style>
+      input {
+        margin-bottom: 15px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .container {
+        width: 50%;
+      }
+    </style> -->
+  </body>
+</html>
